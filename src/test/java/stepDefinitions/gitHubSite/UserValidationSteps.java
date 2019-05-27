@@ -1,32 +1,33 @@
-package stepDefinitions;
+package stepDefinitions.gitHubSite;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import pagesSample.EnterNewPersonPage;
-import pagesSample.KristinaPage;
-import pagesSample.PeopleWithJobPage;
+import pagesSample.gitHubSite.EnterNewPersonPage;
+import pagesSample.gitHubSite.oogeO;
+import pagesSample.gitHubSite.PeopleWithJobPage;
+import stepDefinitions.Hooks;
 
-import static stepDefinitions.MainPoSteps.peopleWithJobPage;
+import static stepDefinitions.gitHubSite.MainPoSteps.peopleWithJobPage;
 
 public class UserValidationSteps {
     private WebDriver driver;
-    static KristinaPage kristinaPage;
+    static oogeO oogeOPage;
     static EnterNewPersonPage enterNewPersonPage;
 
 
     public UserValidationSteps() {
         this.driver = Hooks.driver;
-        kristinaPage = PageFactory.initElements(Hooks.driver, KristinaPage.class);
+        oogeOPage = PageFactory.initElements(Hooks.driver, oogeO.class);
         enterNewPersonPage = PageFactory.initElements(Hooks.driver, EnterNewPersonPage.class);
         peopleWithJobPage = PageFactory.initElements(Hooks.driver, PeopleWithJobPage.class);
     }
 
     @And("^I click \"(submit|add a new)\" button using PO$")
     public void iClickSubmitButton(String nameButton) throws Throwable {
-        kristinaPage.clickButton(nameButton);
+        oogeOPage.clickButton(nameButton);
 
     }
 

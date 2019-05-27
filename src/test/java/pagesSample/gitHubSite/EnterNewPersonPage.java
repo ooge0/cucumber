@@ -1,4 +1,4 @@
-package pagesSample;
+package pagesSample.gitHubSite;
 
 import cucumber.api.DataTable;
 import helpers.HelperBase;

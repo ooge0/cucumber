@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.google;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -7,7 +7,8 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import pagesSample.AgePage;
+import pagesSample.gitHubSite.AgePage;
+import stepDefinitions.Hooks;
 
 import static org.junit.Assert.*;
 

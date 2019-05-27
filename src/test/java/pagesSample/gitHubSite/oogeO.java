@@ -1,4 +1,4 @@
-package pagesSample;
+package pagesSample.gitHubSite;
 
 import helpers.HelperBase;
 import org.openqa.selenium.By;
@@ -9,8 +9,8 @@ import org.openqa.selenium.support.How;
 
 import static org.junit.Assert.assertEquals;
 
-public class KristinaPage extends HelperBase {
-    public KristinaPage(WebDriver wd) {
+public class oogeO extends HelperBase {
+    public oogeO(WebDriver wd) {
         super(wd);
     }
 
@@ -26,10 +26,9 @@ public class KristinaPage extends HelperBase {
     @FindBy(how = How.CSS, using = "#addPersonBtn:nth-child(1)")
     private WebElement addAnewPersonButton;
 
+    public String baseUrl = "https://ooge0.github.io/";
 
-  public String baseUrl = "https://kristinek.github.io/site";
-
-    public String getKristinaPageUrl(String menuItem) {
+    public String getOogeOPageUrl(String menuItem) {
         switch (menuItem) {
             case "enter a number":
                 baseUrl = baseUrl + "/tasks/enter_a_number";
@@ -41,7 +40,7 @@ public class KristinaPage extends HelperBase {
                 baseUrl = baseUrl + "/tasks/enter_a_new_person.html";
                 break;
             default:
-                System.out.println("Check 'getKristinaPageUrl' parameters");
+                System.out.println("Check 'getOogeOPageUrl' parameters");
         }
         return baseUrl;
     }

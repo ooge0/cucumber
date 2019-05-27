@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.gitHubSite;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -6,22 +6,23 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import pagesSample.EnterNewPersonPage;
+import pagesSample.gitHubSite.EnterNewPersonPage;
 import pagesSample.GooglePage;
-import pagesSample.KristinaPage;
-import pagesSample.PeopleWithJobPage;
+import pagesSample.gitHubSite.oogeO;
+import pagesSample.gitHubSite.PeopleWithJobPage;
+import stepDefinitions.Hooks;
 
 public class MainPoSteps {
     private WebDriver driver;
     static GooglePage googlePage;
-    static KristinaPage kristinaPage;
+    static oogeO oogeOPage;
     static PeopleWithJobPage peopleWithJobPage;
     static EnterNewPersonPage enterNewPersonPage;
 
     public MainPoSteps() {
         this.driver = Hooks.driver;
         googlePage = PageFactory.initElements(Hooks.driver, GooglePage.class);
-        kristinaPage = PageFactory.initElements(Hooks.driver, KristinaPage.class);
+        oogeOPage = PageFactory.initElements(Hooks.driver, oogeO.class);
         peopleWithJobPage = PageFactory.initElements(Hooks.driver, PeopleWithJobPage.class);
         enterNewPersonPage = PageFactory.initElements(Hooks.driver, EnterNewPersonPage.class);
     }
@@ -52,28 +53,28 @@ public class MainPoSteps {
 
 
     /***
-     *  below are steps definition for Kristina web site
+     *  below are steps definition for ooge0 web site
      * */
 
     @Given("^I am on (enter a number|people with jobs) page using PO$")
-    public void openKristinaPage(String menuItem) {
-        driver.get(kristinaPage.getKristinaPageUrl(menuItem));
+    public void openOogeOPage(String menuItem) {
+        driver.get(oogeOPage.getOogeOPageUrl(menuItem));
     }
 
     @When("^I enter \"([^\"]*)\" using PO$")
     public void iEnterNumber(String number) throws Throwable {
-        kristinaPage.enterNumber(number);
+        oogeOPage.enterNumber(number);
     }
 
 
     @Then("^I see warning message: \"([^\"]*)\" using PO$")
     public void iSeeWarningMessage(String text) throws Throwable {
-        kristinaPage.checkAllert(text);
+        oogeOPage.checkAllert(text);
     }
 
     @Then("^I check (valid|invalid) \"([^\"]*)\" using PO$")
     public void iCheckNumber(String statement, int number) throws Throwable {
-        kristinaPage.numberValidation(statement, number);
+        oogeOPage.numberValidation(statement, number);
     }
 
 

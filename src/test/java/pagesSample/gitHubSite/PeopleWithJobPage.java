@@ -1,4 +1,4 @@
-package pagesSample;
+package pagesSample.gitHubSite;
 
 import helpers.HelperBase;
 import org.openqa.selenium.By;
