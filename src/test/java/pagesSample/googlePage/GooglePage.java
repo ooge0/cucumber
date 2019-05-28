@@ -1,4 +1,4 @@
-package pagesSample;
+package pagesSample.googlePage;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

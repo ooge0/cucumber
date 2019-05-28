@@ -26,7 +26,7 @@ public class oogeO extends HelperBase {
     @FindBy(how = How.CSS, using = "#addPersonBtn:nth-child(1)")
     private WebElement addAnewPersonButton;
 
-    public String baseUrl = "https://ooge0.github.io/";
+    public String baseUrl = "https://ooge0.github.io/site/";
 
     public String getOogeOPageUrl(String menuItem) {
         switch (menuItem) {

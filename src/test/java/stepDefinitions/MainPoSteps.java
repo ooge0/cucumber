@@ -1,4 +1,4 @@
-package stepDefinitions.gitHubSite;
+package stepDefinitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -7,33 +7,44 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pagesSample.gitHubSite.EnterNewPersonPage;
-import pagesSample.GooglePage;
+import pagesSample.googlePage.GooglePage;
 import pagesSample.gitHubSite.oogeO;
 import pagesSample.gitHubSite.PeopleWithJobPage;
-import stepDefinitions.Hooks;
+import pagesSample.ssLv.SsLv;
 
 public class MainPoSteps {
     private WebDriver driver;
     static GooglePage googlePage;
+    static SsLv ssLvPage;
     static oogeO oogeOPage;
-    static PeopleWithJobPage peopleWithJobPage;
+    public static PeopleWithJobPage peopleWithJobPage;
     static EnterNewPersonPage enterNewPersonPage;
 
     public MainPoSteps() {
         this.driver = Hooks.driver;
         googlePage = PageFactory.initElements(Hooks.driver, GooglePage.class);
+        ssLvPage = PageFactory.initElements(Hooks.driver, SsLv.class);
         oogeOPage = PageFactory.initElements(Hooks.driver, oogeO.class);
         peopleWithJobPage = PageFactory.initElements(Hooks.driver, PeopleWithJobPage.class);
         enterNewPersonPage = PageFactory.initElements(Hooks.driver, EnterNewPersonPage.class);
     }
 
     /***
-     *  below are steps definition for Google web site
+     *  below are steps definition for all sources in the project web site
      * */
 
-    @When("^I am on Google homepage using PO$")
-    public void iAmOnGoogleHomepage() throws Throwable {
-        driver.get(googlePage.getPageUrl());
+    @When("^I am on \"(Google|SS)\" homepage using PO$")
+    public void iAmOnHomepage(String siteName) throws Throwable {
+        switch (siteName) {
+            case "Google":
+                driver.get(googlePage.getPageUrl());
+                break;
+            case "SS":
+                driver.get(ssLvPage.getPageUrl());
+                break;
+            default:
+                System.out.println("please input parameter for iAmOnHomepage");
+        }
     }
 
     @Then("^I verify lucky button text using PO$")

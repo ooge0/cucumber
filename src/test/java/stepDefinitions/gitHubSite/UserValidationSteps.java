@@ -10,7 +10,7 @@ import pagesSample.gitHubSite.oogeO;
 import pagesSample.gitHubSite.PeopleWithJobPage;
 import stepDefinitions.Hooks;
 
-import static stepDefinitions.gitHubSite.MainPoSteps.peopleWithJobPage;
+import static stepDefinitions.MainPoSteps.peopleWithJobPage;
 
 public class UserValidationSteps {
     private WebDriver driver;
