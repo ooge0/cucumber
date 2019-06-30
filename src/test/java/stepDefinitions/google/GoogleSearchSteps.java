@@ -1,28 +1,27 @@
-package stepDefinitions;
+package stepDefinitions.google;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import helpers.Resources;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import pagesSample.AgePage;
+import pagesSample.gitHubSite.AgePage;
+import stepDefinitions.Hooks;
 
 import static org.junit.Assert.*;
 
 
 public class GoogleSearchSteps {
+    static Logger log = Logger.getLogger(GoogleSearchSteps.class.getName());
     private WebDriver driver;
     static AgePage agePage;
 
     public GoogleSearchSteps() {
         this.driver = Hooks.driver;
-    }
-
-    @When("^I am on Google homepage$")
-    public void iAmOnGoogleHomepage() throws Throwable {
-        driver.get("https://google.com");
     }
 
     @Then("^I verify lucky button text$")
@@ -48,7 +47,7 @@ public class GoogleSearchSteps {
 
     @Given("^I am on enter a number page$")
     public void iAmOnEnterANumberPage() throws Throwable {
-        driver.get("https://kristinek.github.io/site/tasks/enter_a_number");
+        driver.get(Resources.getEnvValue());
     }
 
     @When("^I enter \"([^\"]*)\"$")

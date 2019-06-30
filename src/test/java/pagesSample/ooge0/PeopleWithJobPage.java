@@ -1,4 +1,4 @@
-package pagesSample;
+package pagesSample.ooge0;
 
 import helpers.HelperBase;
 import org.openqa.selenium.By;

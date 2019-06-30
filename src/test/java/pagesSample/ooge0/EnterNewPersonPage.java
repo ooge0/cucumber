@@ -1,4 +1,4 @@
-package pagesSample;
+package pagesSample.ooge0;
 
 import cucumber.api.DataTable;
 import helpers.HelperBase;

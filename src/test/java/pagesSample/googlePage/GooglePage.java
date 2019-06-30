@@ -1,4 +1,4 @@
-package pagesSample;
+package pagesSample.googlePage;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -22,10 +22,6 @@ public class GooglePage {
 
     @FindBy(how = How.CLASS_NAME, using = "srg")
     private WebElement result;
-
-    public String getPageUrl() {
-        return "https://google.com";
-    }
 
     public void verifyLuckyButton() throws Throwable {
         String defaultText = "Es ticu veiksmei!";
